@@ -159,7 +159,7 @@
     <!-- ── Navigation ── -->
     <header class="fixed top-0 w-full z-50 glass-nav bg-surface/80 shadow-md">
         <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
-            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer" id="company-name">CURATED AUTO</div>
+            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer" id="company-name"></div>
             <div class="flex items-center gap-6">
                 <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Browse</a>
                 <button class="shimmer-btn text-white font-label-md text-label-md px-6 py-3 rounded-lg btn-active-scale transition-transform">
@@ -297,7 +297,7 @@
     // Derive product ID from the URL path: /<product-id>  OR  ?id=<product-id>
     function getProductId() {
     const company_profile = {
-        company_name: 'CURATED AUTO'
+        company_name: 'Default Location'
     };
         const params = new URLSearchParams(location.search);
         if (params.get('id')) return params.get('id');
