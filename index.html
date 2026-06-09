@@ -1,17 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" style="">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>2022 Porsche 911 Carrera | CURATED AUTO</title>
+    <title>Loading… | CURATED AUTO</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -88,7 +84,6 @@
                         "headline-md": ["Hammersmith One"],
                         "body-md": ["Inter"],
                         "label-sm": ["Inter"],
-                        "display-lg-mobile": ["Hammersmith One"],
                         "sans": ["Hammersmith One", "Inter"]
                     },
                     "fontSize": {
@@ -98,8 +93,7 @@
                         "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
                         "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
                         "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }]
                     },
                     "animation": {
                         "fade-up": "fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
@@ -120,366 +114,358 @@
                             "100%": { backgroundPosition: "200% 0" }
                         }
                     }
-                },
-            },
+                }
+            }
         }
     </script>
     <style>
-        * {
-            font-family: 'Hammersmith One', sans-serif;
-        }
-
+        * { font-family: 'Hammersmith One', sans-serif; }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
             display: inline-block;
             vertical-align: middle;
             font-family: 'Material Symbols Outlined' !important;
         }
-
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .glass-nav {
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-        }
-
-        .ambient-shadow {
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .premium-hover {
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .premium-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: #76777d;
-        }
-
-        .lift-glow:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .btn-active-scale:active {
-            transform: scale(0.96);
-        }
-
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-nav { backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .ambient-shadow { box-shadow: 0px 4px 20px rgba(0,0,0,0.05); }
+        .premium-hover { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        .premium-hover:hover { transform: translateY(-4px); box-shadow: 0px 12px 30px rgba(0,0,0,0.08); border-color: #76777d; }
+        .lift-glow:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15), 0 0 15px rgba(0,0,0,0.05); }
+        .btn-active-scale:active { transform: scale(0.96); }
         .shimmer-btn {
             background: linear-gradient(90deg, #000000 0%, #333333 25%, #000000 50%, #333333 75%, #000000 100%);
             background-size: 200% 100%;
             animation: shimmer 3s infinite linear;
         }
-
-        .nav-link {
-            position: relative;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: currentColor;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .delay-100 {
-            animation-delay: 100ms;
-        }
-
-        .delay-200 {
-            animation-delay: 200ms;
-        }
-
-        .delay-300 {
-            animation-delay: 300ms;
-        }
-
-        .delay-400 {
-            animation-delay: 400ms;
-        }
-
-        .delay-500 {
-            animation-delay: 500ms;
-        }
-
+        .nav-link { position: relative; }
+        .nav-link::after { content:''; position:absolute; width:0; height:2px; bottom:-4px; left:0; background-color:currentColor; transition:width 0.3s ease; }
+        .nav-link:hover::after { width:100%; }
+        /* skeleton pulse */
+        .skeleton { background: linear-gradient(90deg, #e5eeff 25%, #dce9ff 50%, #e5eeff 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite linear; }
+        @keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+        /* gallery transition */
+        #main-gallery-image { transition: opacity 0.3s ease, transform 0.3s ease; }
+        .thumb-active { border-color: #000 !important; box-shadow: 0 0 0 2px #fff, 0 0 0 4px #000; }
         @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
+            * { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
         }
     </style>
 </head>
 
-<body class="bg-background text-on-background font-body-md antialiased" data-mode="connect">
-    <!-- Top Navigation Bar -->
+<body class="bg-background text-on-background antialiased">
+
+    <!-- ── Navigation ── -->
     <header class="fixed top-0 w-full z-50 glass-nav bg-surface/80 shadow-md">
-        <nav class="flex justify-between items-center px-margin-desktop max-w-container-max mx-auto h-20">
-            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer">CURATED AUTO
-            </div>
-            <div class="hidden md:flex items-center gap-8">
-
-
-
-            </div>
-            <div class="flex items-center gap-6"><a
-                    class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200"
-                    href="#">Sell Your Car</a>
-                <button
-                    class="shimmer-btn text-white font-label-md text-label-md px-6 py-3 rounded-lg btn-active-scale transition-transform">
+        <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
+            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer">CURATED AUTO</div>
+            <div class="flex items-center gap-6">
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sell Your Car</a>
+                <button class="shimmer-btn text-white font-label-md text-label-md px-6 py-3 rounded-lg btn-active-scale transition-transform">
                     Book Now
                 </button>
             </div>
         </nav>
     </header>
-    <main class="pt-24 pb-20 overflow-hidden">
+
+    <!-- ── Loading / Error States ── -->
+    <div id="loading-state" class="pt-24 pb-20">
         <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <!-- Photo Gallery Section -->
+            <!-- skeleton hero -->
+            <div class="skeleton rounded-xl mb-4" style="aspect-ratio:21/9"></div>
+            <div class="flex gap-4 mb-12">
+                <div class="skeleton rounded-lg flex-shrink-0" style="width:192px;aspect-ratio:16/9"></div>
+                <div class="skeleton rounded-lg flex-shrink-0" style="width:192px;aspect-ratio:16/9"></div>
+                <div class="skeleton rounded-lg flex-shrink-0" style="width:192px;aspect-ratio:16/9"></div>
+            </div>
+            <div class="skeleton rounded-xl h-8 w-64 mb-4"></div>
+            <div class="skeleton rounded-xl h-6 w-40 mb-10"></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="skeleton rounded-xl h-16"></div>
+                <div class="skeleton rounded-xl h-16"></div>
+                <div class="skeleton rounded-xl h-16"></div>
+                <div class="skeleton rounded-xl h-16"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="error-state" class="hidden pt-24 pb-20 flex items-center justify-center min-h-screen">
+        <div class="text-center px-6">
+            <span class="material-symbols-outlined text-[64px] text-outline mb-4 block">error_outline</span>
+            <h2 class="font-headline-md text-headline-md mb-2">Listing not found</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant" id="error-message">This vehicle listing could not be loaded.</p>
+        </div>
+    </div>
+
+    <!-- ── Main Content (populated by JS) ── -->
+    <main id="main-content" class="hidden pt-24 pb-20 overflow-hidden">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+
+            <!-- Photo Gallery -->
             <section class="mb-12 animate-fade-up">
-                <div
-                    class="relative group aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden mb-4 bg-surface-container">
-                    <img class="w-full h-full object-cover transition-opacity duration-500 animate-scale-in"
-                        data-alt="A professional studio photograph of a 2022 Porsche 911 Carrera in a sleek shark blue finish."
-                        id="main-gallery-image"
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL475l04GislNgNhI38QjYw_qdv_0D2GPjr0dldwu4HJ4HwqFZZHchuE8fv6NwmPIkuZb8wJCkLbakW87CDQT08nh9q38nbFjLDVyJ84MGzArJAUbgRLtH4eQceATkuSPMvYL9P2vpoXdOMADiIkXrYLMtCjA71QpdmkmOQs_BByRyd5_J-Fr4pnPYkHvFszF90_uL5NxbxfeFx8a2TCebylgBWeHentSvKbeYFN98VlkT3RU4J_FkiYKcqkVOq_DB-1JG3mUOhjk">
-                    <!-- Overlays -->
-                    <button
-                        class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/40 btn-active-scale"
-                        onclick="slideGallery(-1)">
+                <!-- Main image -->
+                <div class="relative group rounded-xl overflow-hidden mb-4 bg-surface-container" style="aspect-ratio:21/9">
+                    <img id="main-gallery-image" class="w-full h-full object-cover animate-scale-in" src="" alt="">
+                    <button class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/40 btn-active-scale" onclick="slideGallery(-1)">
                         <span class="material-symbols-outlined">chevron_left</span>
                     </button>
-                    <button
-                        class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/40 btn-active-scale"
-                        onclick="slideGallery(1)">
+                    <button class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full text-white opacity-0 group-hover:opacity-100 transition-all hover:bg-white/40 btn-active-scale" onclick="slideGallery(1)">
                         <span class="material-symbols-outlined">chevron_right</span>
                     </button>
-                    <div
-                        class="absolute bottom-6 right-6 px-4 py-2 bg-black/40 backdrop-blur-md rounded-full text-white font-label-sm text-label-sm">
-                        <span class="" id="current-img-index">1</span> / 6
+                    <div class="absolute bottom-6 right-6 px-4 py-2 bg-black/40 backdrop-blur-md rounded-full text-white font-label-sm text-label-sm">
+                        <span id="current-img-index">1</span> / <span id="total-img-count">1</span>
                     </div>
-                    <button
-                        class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm hover:bg-white transition-all flex items-center justify-center hover:rotate-12 btn-active-scale"
-                        title="Share this vehicle">
+                    <button class="absolute top-4 right-4 z-10 bg-white/80 backdrop-blur-sm p-2 rounded-full shadow-sm hover:bg-white transition-all flex items-center justify-center hover:rotate-12 btn-active-scale" title="Share this vehicle" onclick="shareVehicle()">
                         <span class="material-symbols-outlined text-[20px] text-on-surface">share</span>
                     </button>
                 </div>
                 <!-- Thumbnails -->
-                <div class="flex gap-4 overflow-x-auto hide-scrollbar pb-2">
-                    <button
-                        class="flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-primary ring-2 ring-offset-2 ring-transparent transition-all hover:scale-105 active:scale-95"
-                        onclick="updateMainImage(this, 1)">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKYmWPCJyZvy8UfBehqR6MjGWDfUhGxJpwcoMNXZZAx0nR82XclGNinW-81XqIHoLoOpHhj7w1P-KdR1p_Og_p0rR5QER8TSdcjmDP0fZZbA-d982oUeg31gvjrX05DOOpM0nab7V-_b2zKCwnM_Ioaa4PtDdplSx6J8q7F59Dyd37OnfMRndc3AW-uZnq874zZlTBIC8s0gwKPtVsmQzRpTfZEemDNhpzrlBn21Od8o4h3c4Kf9oqUJpzu5Gn2FuAICIIjftSKuU">
-                    </button>
-                    <button
-                        class="flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all hover:scale-105 active:scale-95"
-                        onclick="updateMainImage(this, 2)">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLd-d2UfBA7JxW-wK9p5sE5BXJweegq-ET3Re1KtLnu9c6Ao2hdeN2kZFlabs73AD2Wq_0q_09xU4K9XghLzlFh3Q_LChDUhx97aEWNM56r-a1LH9efAPz1GXcSE2maxwNxyGDklSQPIpdmyCRoqKgYVAURWnkUe4h0bxBA97vvY5OY8Jk9k_05FVd3ljhKo0Pdqotya0yI_krpFWaQ8aoeDwhAcKclrVUtF3pGxNm7zavfxMsAiqcEy2yowLnvVNmwjM-SP6us4I">
-                    </button>
-                    <button
-                        class="flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all hover:scale-105 active:scale-95"
-                        onclick="updateMainImage(this, 3)">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1R4imkLzgJrC-rWQy_KAeroMHE8cJxtEQOHfNxFIjd3elPDdGRam7gM0vsDBJ6sUbln4i-c8FrhOEK2T-Fk3VlbNZTAzuAkI-inoXJYRswx2s7H5ecF0cq3so2BTdj_AdAy3hXS_tjU1HeLWdm_MW-mNP0WqSlUTu-EWUVJySKK4YR_0wmzsBeoz_gTwWKs0f8mjRInosJzgQwx1waRTpOWHk02FdxqI-cH4N20-1uJ9vzFNQTLcWzOapgDEmDFkGUFNjunN1wyk">
-                    </button>
-                    <button
-                        class="flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all hover:scale-105 active:scale-95"
-                        onclick="updateMainImage(this, 4)">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZxuiby_uFjqiBWtsS_5WAL4FcbB37lUcuEwM-b9XIYpNrX69QpTdw_d1iiow10PxgvgU8HJ5EKgUvyAYS1vCJ8MfSBL7WfqPoTFcBwJCeAG7PG_KoKErzTINwiss_pqfami1eWqFcf5UiZs8K31AvlhK0i7DU582SHa5t5_b6JuQPdiENZ17kwEZVwk_R5iztmXziS0OrOZGDD4fN9hpOGqSKG2aupSU0-CyU0Qi3XrsSJcu9BUriGBThtNkEQXHp5P5_ixDe2Ek">
-                    </button>
-                    <button
-                        class="flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all hover:scale-105 active:scale-95"
-                        onclick="updateMainImage(this, 5)">
-                        <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK2ZwCjGj60dbs1psdxY5BLLge_lqqUZ4Od6uyfk1Gqs9LNHNJUOG0t8Y0HZwfWK0EcBDhVSSDXOApQIDj0ks6BLQO3z-0EiftE0hvjJJCWypL_A_O02V2qHBlN_Iw1JXMnLtw82CAyAjr4NFrOKTWWK8UwcQlwQpb3rmolDi9qoJq7v8_zlIpWv2kjhBojeR9BrbpSSNBbMSUdQaYtRQAXhyd78OOicH73YQOwYQwtd1A0WCP1SPQaDmao66cITvZ7LCeQz_moLM">
-                    </button>
-                </div>
+                <div id="thumbnails" class="flex gap-4 overflow-x-auto hide-scrollbar pb-2"></div>
             </section>
+
             <!-- Content Grid -->
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
-                <!-- Main Content (Left) -->
+
+                <!-- Left: Title + Specs -->
                 <div class="lg:col-span-8 space-y-12">
-                    <!-- Title & Price Header -->
-                    <div
-                        class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-10 border-b border-outline-variant opacity-0 animate-fade-up delay-100">
+
+                    <!-- Title & Price -->
+                    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-10 border-b border-outline-variant animate-fade-up" style="animation-delay:100ms">
                         <div>
-                            <h1 class="font-headline-lg text-headline-lg mb-2">2022 Porsche 911 Carrera</h1>
+                            <h1 id="vehicle-title" class="font-headline-lg text-headline-lg mb-2">—</h1>
                             <div class="flex items-center gap-2 text-on-surface-variant">
                                 <span class="material-symbols-outlined text-[18px]">location_on</span>
-                                <span class="font-body-md text-body-md">Beverly Hills Showroom</span>
+                                <span id="vehicle-location" class="font-body-md text-body-md">—</span>
                             </div>
                         </div>
                         <div class="text-left md:text-right">
-                            <div
-                                class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">
-                                Asking Price</div>
-                            <div class="font-display-lg text-[40px] leading-tight text-primary">$124,500</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant mb-1 uppercase tracking-wider">Asking Price</div>
+                            <div id="vehicle-price" class="font-display-lg text-[40px] leading-tight text-primary">—</div>
                         </div>
                     </div>
-                    <!-- Key Specs Grid -->
-                    <section class="opacity-0 animate-fade-up delay-200">
+
+                    <!-- Key Specs -->
+                    <section class="animate-fade-up" style="animation-delay:200ms">
                         <h2 class="font-headline-md text-headline-md mb-6">Key Specifications</h2>
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-300">
-                                <span class="material-symbols-outlined text-primary">directions_car</span>
-                                <div class="font-label-md text-label-md">Porsche</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-300 delay-100">
-                                <span class="material-symbols-outlined">car_gear</span>
-                                <div class="font-label-md text-label-md">911 Carrera</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-300 delay-200">
-                                <span class="material-symbols-outlined text-primary">calendar_today</span>
-                                <div class="font-label-md text-label-md">2022</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-300 delay-300">
-                                <span class="material-symbols-outlined text-primary">speed</span>
-                                <div class="font-label-md text-label-md">8,420 km</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-400">
-                                <span class="material-symbols-outlined text-primary">local_gas_station</span>
-                                <div class="font-label-md text-label-md">Gasoline</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-400 delay-100">
-                                <span class="material-symbols-outlined"> auto_transmission</span>
-                                <div class="font-label-md text-label-md">PDK Automatic</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-400 delay-200">
-                                <span class="material-symbols-outlined text-primary">person</span>
-                                <div class="font-label-md text-label-md">1st Owner</div>
-                            </div>
-                            <div
-                                class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up delay-400 delay-300">
-                                <span class="material-symbols-outlined text-primary">palette</span>
-                                <div class="font-label-md text-label-md">Shark Blue</div>
-                            </div>
+                        <div id="specs-grid" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <!-- populated by JS -->
                         </div>
                     </section>
+
                 </div>
-                <!-- Sidebar (Right) -->
-                <aside class="lg:col-span-4 lg:sticky lg:top-28 opacity-0 animate-fade-up delay-500">
-                    <div
-                        class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant ambient-shadow lift-glow transition-all">
-                        <!-- Inquiry Form -->
+
+                <!-- Right: Inquiry Sidebar -->
+                <aside class="lg:col-span-4 lg:sticky lg:top-28 animate-fade-up" style="animation-delay:500ms">
+                    <div class="bg-surface-container-lowest rounded-2xl p-8 border border-outline-variant ambient-shadow lift-glow transition-all">
                         <div class="space-y-4">
-                            <div
-                                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">
-                                Request Information</div>
+                            <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mb-2">Request Information</div>
                             <div>
                                 <label class="block font-label-sm text-label-sm mb-1">Full Name</label>
-                                <input
-                                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 text-body-md transition-shadow"
-                                    placeholder="John Doe" type="text">
+                                <input id="inquiry-name" class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 px-4 text-body-md transition-shadow" placeholder="Your name" type="text">
                             </div>
                             <div>
                                 <label class="block font-label-sm text-label-sm mb-1">Phone Number</label>
-                                <input
-                                    class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 text-body-md transition-shadow"
-                                    placeholder="+1 (555) 000-0000" type="tel">
+                                <input id="inquiry-phone" class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 px-4 text-body-md transition-shadow" placeholder="+1 (555) 000-0000" type="tel">
                             </div>
-                            <button
-                                class="w-full bg-primary text-white font-label-md text-label-md py-4 rounded-lg hover:opacity-90 btn-active-scale transition-all shadow-lg hover:shadow-primary/20">
+                            <button onclick="sendInquiry()" class="w-full bg-primary text-white font-label-md text-label-md py-4 rounded-lg hover:opacity-90 btn-active-scale transition-all shadow-lg hover:shadow-primary/20">
                                 Send Inquiry
                             </button>
+                            <p id="inquiry-feedback" class="hidden text-center font-label-sm text-label-sm text-on-surface-variant pt-1"></p>
                         </div>
                     </div>
                 </aside>
+
             </div>
         </div>
     </main>
+
     <!-- Footer -->
     <footer class="w-full mt-20 bg-tertiary">
-        <div
-            class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop px-margin-desktop max-w-container-max mx-auto py-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop px-margin-desktop max-w-container-max mx-auto py-10">
             <div class="md:col-span-12 text-center">
-                <p class="font-body-md text-tertiary-fixed-dim text-center">© 2026 Curated Auto Gallery. All rights
-                    reserved.</p>
+                <p class="font-body-md text-tertiary-fixed-dim text-center">© 2026 Curated Auto Gallery. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
     <script>
-        const galleryImages = [
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDL475l04GislNgNhI38QjYw_qdv_0D2GPjr0dldwu4HJ4HwqFZZHchuE8fv6NwmPIkuZb8wJCkLbakW87CDQT08nh9q38nbFjLDVyJ84MGzArJAUbgRLtH4eQceATkuSPMvYL9P2vpoXdOMADiIkXrYLMtCjA71QpdmkmOQs_BByRyd5_J-Fr4pnPYkHvFszF90_uL5NxbxfeFx8a2TCebylgBWeHentSvKbeYFN98VlkT3RU4J_FkiYKcqkVOq_DB-1JG3mUOhjk",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuBKYmWPCJyZvy8UfBehqR6MjGWDfUhGxJpwcoMNXZZAx0nR82XclGNinW-81XqIHoLoOpHhj7w1P-KdR1p_Og_p0rR5QER8TSdcjmDP0fZZbA-d982oUeg31gvjrX05DOOpM0nab7V-_b2zKCwnM_Ioaa4PtDdplSx6J8q7F59Dyd37OnfMRndc3AW-uZnq874zZlTBIC8s0gwKPtVsmQzRpTfZEemDNhpzrlBn21Od8o4h3c4Kf9oqUJpzu5Gn2FuAICIIjftSKuU",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDLd-d2UfBA7JxW-wK9p5sE5BXJweegq-ET3Re1KtLnu9c6Ao2hdeN2kZFlabs73AD2Wq_0q_09xU4K9XghLzlFh3Q_LChDUhx97aEWNM56r-a1LH9efAPz1GXcSE2maxwNxyGDklSQPIpdmyCRoqKgYVAURWnkUe4h0bxBA97vvY5OY8Jk9k_05FVd3ljhKo0Pdqotya0yI_krpFWaQ8aoeDwhAcKclrVUtF3pGxNm7zavfxMsAiqcEy2yowLnvVNmwjM-SP6us4I",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuA1R4imkLzgJrC-rWQy_KAeroMHE8cJxtEQOHfNxFIjd3elPDdGRam7gM0vsDBJ6sUbln4i-c8FrhOEK2T-Fk3VlbNZTAzuAkI-inoXJYRswx2s7H5ecF0cq3so2BTdj_AdAy3hXS_tjU1HeLWdm_MW-mNP0WqSlUTu-EWUVJySKK4YR_0wmzsBeoz_gTwWKs0f8mjRInosJzgQwx1waRTpOWHk02FdxqI-cH4N20-1uJ9vzFNQTLcWzOapgDEmDFkGUFNjunN1wyk",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuBZxuiby_uFjqiBWtsS_5WAL4FcbB37lUcuEwM-b9XIYpNrX69QpTdw_d1iiow10PxgvgU8HJ5EKgUvyAYS1vCJ8MfSBL7WfqPoTFcBwJCeAG7PG_KoKErzTINwiss_pqfami1eWqFcf5UiZs8K31AvlhK0i7DU582SHa5t5_b6JuQPdiENZ17kwEZVwk_R5iztmXziS0OrOZGDD4fN9hpOGqSKG2aupSU0-CyU0Qi3XrsSJcu9BUriGBThtNkEQXHp5P5_ixDe2Ek",
-            "https://lh3.googleusercontent.com/aida-public/AB6AXuDK2ZwCjGj60dbs1psdxY5BLLge_lqqUZ4Od6uyfk1Gqs9LNHNJUOG0t8Y0HZwfWK0EcBDhVSSDXOApQIDj0ks6BLQO3z-0EiftE0hvjJJCWypL_A_O02V2qHBlN_Iw1JXMnLtw82CAyAjr4NFrOKTWWK8UwcQlwQpb3rmolDi9qoJq7v8_zlIpWv2kjhBojeR9BrbpSSNBbMSUdQaYtRQAXhyd78OOicH73YQOwYQwtd1A0WCP1SPQaDmao66cITvZ7LCeQz_moLM"
-        ];
+    // ── CONFIG ─────────────────────────────────────────────────────────────────
+    // The R2 public base URL (no trailing slash)
+    const R2_PUBLIC_BASE = 'https://pub-9fd0da456f854d09894aa770acbf93f5.r2.dev';
 
-        let currentIndex = 0;
+    // Derive product ID from the URL path: /<product-id>  OR  ?id=<product-id>
+    function getProductId() {
+        const params = new URLSearchParams(location.search);
+        if (params.get('id')) return params.get('id');
+        const slug = location.pathname.split('/').filter(Boolean).pop();
+        return slug || null;
+    }
 
-        function updateMainImage(thumb, index) {
-            const mainImg = document.getElementById('main-gallery-image');
-            const indexDisplay = document.getElementById('current-img-index');
+    // ── GALLERY STATE ──────────────────────────────────────────────────────────
+    let galleryImages = [];
+    let currentIndex = 0;
 
-            mainImg.style.opacity = '0';
-            mainImg.style.transform = 'scale(1.05)';
-
-            setTimeout(() => {
-                mainImg.src = thumb.querySelector('img').src;
-                mainImg.style.opacity = '1';
-                mainImg.style.transform = 'scale(1)';
-                currentIndex = index - 1;
-                indexDisplay.innerText = index;
-            }, 300);
-
-            const allThumbs = thumb.parentElement.querySelectorAll('button');
-            allThumbs.forEach(t => {
-                t.classList.remove('border-primary', 'ring-2', 'ring-offset-2');
-                t.classList.add('border-transparent');
-            });
-            thumb.classList.add('border-primary', 'ring-2', 'ring-offset-2');
-            thumb.classList.remove('border-transparent');
-        }
-
-        function slideGallery(direction) {
-            currentIndex += direction;
-            if (currentIndex < 0) currentIndex = galleryImages.length - 1;
-            if (currentIndex >= galleryImages.length) currentIndex = 0;
-
-            const thumbs = document.querySelectorAll('button.flex-shrink-0');
-            updateMainImage(thumbs[currentIndex], currentIndex + 1);
-        }
-
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 20) {
-                header.classList.add('shadow-md');
-            } else {
-                header.classList.remove('shadow-md');
-            }
+    function setMainImage(index) {
+        if (!galleryImages.length) return;
+        currentIndex = (index + galleryImages.length) % galleryImages.length;
+        const img = document.getElementById('main-gallery-image');
+        img.style.opacity = '0';
+        img.style.transform = 'scale(1.05)';
+        setTimeout(() => {
+            img.src = galleryImages[currentIndex];
+            img.style.opacity = '1';
+            img.style.transform = 'scale(1)';
+            document.getElementById('current-img-index').textContent = currentIndex + 1;
+        }, 250);
+        // highlight active thumb
+        document.querySelectorAll('.thumb-btn').forEach((btn, i) => {
+            btn.classList.toggle('thumb-active', i === currentIndex);
         });
+    }
+
+    function slideGallery(dir) { setMainImage(currentIndex + dir); }
+
+    // ── SPEC CHIP ──────────────────────────────────────────────────────────────
+    const SPEC_META = {
+        manufacturer: { icon: 'directions_car',    label: v => v },
+        model:        { icon: 'car_gear',           label: v => v },
+        year:         { icon: 'calendar_today',     label: v => v },
+        mileage:      { icon: 'speed',              label: v => v || '—' },
+        fuel:         { icon: 'local_gas_station',  label: v => v },
+        transmission: { icon: 'auto_transmission',  label: v => v },
+        owners:       { icon: 'person',             label: v => v + ' Owner' },
+        color:        { icon: 'palette',            label: v => v },
+    };
+
+    function buildSpecsGrid(specs) {
+        const grid = document.getElementById('specs-grid');
+        grid.innerHTML = '';
+        let delay = 300;
+        for (const [key, meta] of Object.entries(SPEC_META)) {
+            const val = specs[key];
+            if (!val) continue;
+            const chip = document.createElement('div');
+            chip.className = 'bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow lift-glow premium-hover flex items-center gap-3 p-4 transition-all opacity-0 animate-fade-up';
+            chip.style.animationDelay = delay + 'ms';
+            chip.innerHTML = `
+                <span class="material-symbols-outlined text-primary">${meta.icon}</span>
+                <div class="font-label-md text-label-md">${meta.label(val)}</div>`;
+            grid.appendChild(chip);
+            delay += 50;
+        }
+    }
+
+    // ── PRICE FORMATTER ────────────────────────────────────────────────────────
+    function formatPrice(price) {
+        if (!price || price === 0) return 'Contact Us';
+        return '$' + Number(price).toLocaleString('en-US');
+    }
+
+    // ── THUMBNAILS ─────────────────────────────────────────────────────────────
+    function buildThumbnails(images) {
+        const container = document.getElementById('thumbnails');
+        container.innerHTML = '';
+        images.forEach((src, i) => {
+            const btn = document.createElement('button');
+            btn.className = 'thumb-btn flex-shrink-0 w-32 md:w-48 aspect-video rounded-lg overflow-hidden border-2 border-transparent hover:border-outline-variant transition-all hover:scale-105 active:scale-95';
+            if (i === 0) btn.classList.add('thumb-active');
+            btn.onclick = () => setMainImage(i);
+            const img = document.createElement('img');
+            img.className = 'w-full h-full object-cover transition-transform duration-500 hover:scale-110';
+            img.src = src;
+            img.alt = `Vehicle photo ${i + 1}`;
+            img.loading = 'lazy';
+            btn.appendChild(img);
+            container.appendChild(btn);
+        });
+    }
+
+    // ── INQUIRY ────────────────────────────────────────────────────────────────
+    function sendInquiry() {
+        const name  = document.getElementById('inquiry-name').value.trim();
+        const phone = document.getElementById('inquiry-phone').value.trim();
+        const fb    = document.getElementById('inquiry-feedback');
+        if (!name || !phone) {
+            fb.textContent = 'Please fill in both fields.';
+            fb.classList.remove('hidden');
+            return;
+        }
+        // Real implementation: POST to your backend / WhatsApp / email API
+        fb.textContent = "✓ Inquiry sent! We'll be in touch shortly.";
+        fb.classList.remove('hidden');
+    }
+
+    // ── SHARE ──────────────────────────────────────────────────────────────────
+    function shareVehicle() {
+        if (navigator.share) {
+            navigator.share({ title: document.title, url: location.href });
+        } else {
+            navigator.clipboard.writeText(location.href).then(() => alert('Link copied!'));
+        }
+    }
+
+    // ── LOAD DATA ──────────────────────────────────────────────────────────────
+    async function loadProduct() {
+        const productId = getProductId();
+        if (!productId) {
+            showError('No product ID found in the URL.');
+            return;
+        }
+
+        const jsonUrl = `${R2_PUBLIC_BASE}/products/${productId}.json`;
+
+        try {
+            const res = await fetch(jsonUrl);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const data = await res.json();
+            renderProduct(data);
+        } catch (err) {
+            showError(`Could not load listing: ${err.message}`);
+        }
+    }
+
+    function renderProduct(data) {
+        // Page title
+        document.title = `${data.title} | CURATED AUTO`;
+
+        // Gallery
+        galleryImages = data.images || [];
+        if (galleryImages.length) {
+            const mainImg = document.getElementById('main-gallery-image');
+            mainImg.src = galleryImages[0];
+            mainImg.alt = data.title;
+            document.getElementById('total-img-count').textContent = galleryImages.length;
+            buildThumbnails(galleryImages);
+        }
+
+        // Title / location / price
+        document.getElementById('vehicle-title').textContent = data.title || 'Vehicle';
+        document.getElementById('vehicle-location').textContent = data.location || 'Location not specified';
+        document.getElementById('vehicle-price').textContent = formatPrice(data.price);
+
+        // Specs
+        buildSpecsGrid(data.specs || {});
+
+        // Show content
+        document.getElementById('loading-state').classList.add('hidden');
+        document.getElementById('main-content').classList.remove('hidden');
+    }
+
+    function showError(msg) {
+        document.getElementById('loading-state').classList.add('hidden');
+        document.getElementById('error-message').textContent = msg;
+        document.getElementById('error-state').classList.remove('hidden');
+    }
+
+    // ── BOOT ───────────────────────────────────────────────────────────────────
+    loadProduct();
+
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        header.classList.toggle('shadow-md', window.scrollY > 20);
+    });
     </script>
 
-
 </body>
-
 </html>
