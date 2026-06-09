@@ -430,7 +430,7 @@
 
     function renderProduct(data) {
         // Page title
-        document.title = `${data.title} | ${company_profile.company_name}`;
+        document.title = `${data.title} | ${data.location || 'Location'}`;
 
         // Gallery
         galleryImages = data.images || [];
@@ -463,8 +463,8 @@
 
     // ── BOOT ───────────────────────────────────────────────────────────────────
     loadProduct();
-    document.getElementById('company-name').textContent = company_profile.company_name;
-    document.getElementById('page-title').textContent = `Loading… | ${company_profile.company_name}`;
+        document.getElementById('company-name').textContent = data.location || 'Location';
+    document.getElementById('page-title').textContent = `${data.title} | ${data.location || 'Location'}`;
 
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
