@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title id="page-title">Loading…</title>
+    <title id="page-title">Product Gallery</title>
+    <meta property="og:title" content="Product Gallery">
+    <meta property="og:description" content="View product specifications, photos, and submit inquiries.">
+    <meta property="og:type" content="website">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -205,7 +208,7 @@
             <section class="mb-12 animate-fade-up">
                 <!-- Main image -->
                 <div class="relative group rounded-xl overflow-hidden mb-4 bg-surface-container" style="aspect-ratio:21/9">
-                    <img id="main-gallery-image" class="w-full h-full object-cover animate-scale-in" src="" alt="">
+                    <img id="main-gallery-image" class="w-full h-full object-cover animate-scale-in cursor-zoom-in" onclick="openLightbox()" src="" alt="">
                     <button class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 flex items-center justify-center rounded-full text-white opacity-0 group-hover:opacity-100 transition-all btn-active-scale" onclick="slideGallery(-1)">
                         <span class="material-symbols-outlined">chevron_left</span>
                     </button>
@@ -311,6 +314,8 @@
     function setMainImage(index) {
         if (!galleryImages.length) return;
         currentIndex = (index + galleryImages.length) % galleryImages.length;
+        
+        // Update main page image
         const img = document.getElementById('main-gallery-image');
         img.style.opacity = '0';
         img.style.transform = 'scale(1.05)';
@@ -320,6 +325,21 @@
             img.style.transform = 'scale(1)';
             document.getElementById('current-img-index').textContent = currentIndex + 1;
         }, 250);
+
+        // Update lightbox image if modal is open
+        const lightboxImg = document.getElementById('lightbox-image');
+        const lightboxModal = document.getElementById('lightbox-modal');
+        if (lightboxModal && !lightboxModal.classList.contains('hidden')) {
+            lightboxImg.style.opacity = '0';
+            lightboxImg.style.transform = 'scale(0.97)';
+            setTimeout(() => {
+                lightboxImg.src = galleryImages[currentIndex];
+                document.getElementById('lightbox-current-index').textContent = currentIndex + 1;
+                lightboxImg.style.opacity = '1';
+                lightboxImg.style.transform = 'scale(1)';
+            }, 200);
+        }
+
         // highlight active thumb
         document.querySelectorAll('.thumb-btn').forEach((btn, i) => {
             btn.classList.toggle('thumb-active', i === currentIndex);
@@ -327,6 +347,62 @@
     }
 
     function slideGallery(dir) { setMainImage(currentIndex + dir); }
+
+    // ── LIGHTBOX FUNCTIONS ──────────────────────────────────────────────────────
+    function openLightbox() {
+        if (!galleryImages.length) return;
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-image');
+        
+        img.src = galleryImages[currentIndex];
+        document.getElementById('lightbox-current-index').textContent = currentIndex + 1;
+        document.getElementById('lightbox-total-count').textContent = galleryImages.length;
+        
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        
+        // Trigger reflow for transition
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modal.classList.add('opacity-100');
+            img.classList.remove('scale-95');
+            img.classList.add('scale-100');
+        }, 10);
+
+        // Prevent body scroll
+        document.body.classList.add('overflow-hidden');
+    }
+
+    function closeLightbox() {
+        const modal = document.getElementById('lightbox-modal');
+        const img = document.getElementById('lightbox-image');
+        
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        img.classList.remove('scale-100');
+        img.classList.add('scale-95');
+        
+        setTimeout(() => {
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            // Restore body scroll
+            document.body.classList.remove('overflow-hidden');
+        }, 300);
+    }
+
+    // Keyboard navigation
+    window.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('lightbox-modal');
+        if (modal && !modal.classList.contains('hidden')) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            } else if (e.key === 'ArrowLeft') {
+                slideGallery(-1);
+            } else if (e.key === 'ArrowRight') {
+                slideGallery(1);
+            }
+        }
+    });
 
     // ── SPEC CHIP ──────────────────────────────────────────────────────────────
     const SPEC_META = {
@@ -482,10 +558,36 @@
     <a id="whatsapp-button" href="https://wa.me/?text=Hi%20there!" target="_blank" rel="noopener noreferrer" 
        class="fixed bottom-6 right-6 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 z-50 hover:scale-110"
        title="Chat on WhatsApp">
-        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.963C16.488 2.01 14.016 1.01 11.4 1.01c-5.436 0-9.86 4.37-9.864 9.8 0 2.127.556 4.2 1.61 6.01l-.97 3.542 3.635-.954zm10.902-6.19c-.299-.149-1.764-.87-2.034-.967-.27-.099-.467-.149-.662.149-.195.299-.755.967-.927 1.162-.171.197-.344.22-.643.072-.3-.149-1.265-.466-2.41-1.485-.89-.792-1.492-1.77-1.666-2.07-.174-.299-.019-.462.13-.61.135-.133.3-.349.45-.523.149-.174.199-.299.299-.497.1-.201.05-.375-.025-.524-.075-.149-.662-1.595-.91-2.189-.243-.584-.489-.505-.662-.514-.17-.008-.367-.01-.564-.01-.197 0-.52.074-.792.372-.272.299-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.764-.719 2.011-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-        </svg>
+        <span class="material-symbols-outlined text-white text-[32px]">chat</span>
     </a>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" onclick="closeLightbox()" class="fixed inset-0 z-[100] bg-black/95 backdrop-blur-md hidden flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 cursor-zoom-out">
+        <!-- Close Button -->
+        <button onclick="closeLightbox(); event.stopPropagation();" class="absolute top-6 right-6 text-white hover:text-gray-300 flex items-center justify-center p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all btn-active-scale" title="Close">
+            <span class="material-symbols-outlined text-[32px]">close</span>
+        </button>
+
+        <!-- Previous Button -->
+        <button onclick="slideGallery(-1); event.stopPropagation();" class="absolute left-6 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 flex items-center justify-center w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 transition-all btn-active-scale" title="Previous Image">
+            <span class="material-symbols-outlined text-[36px]">chevron_left</span>
+        </button>
+
+        <!-- Next Button -->
+        <button onclick="slideGallery(1); event.stopPropagation();" class="absolute right-6 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 flex items-center justify-center w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 transition-all btn-active-scale" title="Next Image">
+            <span class="material-symbols-outlined text-[36px]">chevron_right</span>
+        </button>
+
+        <!-- Image Container -->
+        <div class="max-w-[90%] max-h-[80vh] flex justify-center items-center select-none">
+            <img id="lightbox-image" onclick="event.stopPropagation();" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl transition-all duration-300 scale-95" src="" alt="Fullscreen image preview">
+        </div>
+
+        <!-- Image Counter -->
+        <div class="text-white/70 font-label-md text-label-md mt-6">
+            <span id="lightbox-current-index">1</span> / <span id="lightbox-total-count">1</span>
+        </div>
+    </div>
 
 </body>
 </html>
