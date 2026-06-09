@@ -161,7 +161,6 @@
         <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
             <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer" id="company-name"></div>
             <div class="flex items-center gap-6">
-                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Book Now</a>
                 <button class="shimmer-btn text-white font-label-md text-label-md px-6 py-3 rounded-lg btn-active-scale transition-transform">
                     Book Now
                 </button>
@@ -445,6 +444,7 @@
         // Title / location / price
         document.getElementById('vehicle-title').textContent = data.title || 'Vehicle';
         document.getElementById('vehicle-location').textContent = data.location || 'Location not specified';
+        document.getElementById('company-name').textContent = data.location || 'Location not specified';
         document.getElementById('footer-text').textContent = `© 2026 ${data.location || 'Gallery'}. All rights reserved.`;
         document.getElementById('vehicle-price').textContent = formatPrice(data.price);
 
@@ -464,8 +464,6 @@
 
     // ── BOOT ───────────────────────────────────────────────────────────────────
     loadProduct();
-        document.getElementById('company-name').textContent = data.location || 'Location not specified';
-    document.getElementById('page-title').textContent = `${data.title} | ${data.location || 'Location'}`;
 
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
