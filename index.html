@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Loading… | CURATED AUTO</title>
+    <title id="page-title">Loading…</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
@@ -159,9 +159,9 @@
     <!-- ── Navigation ── -->
     <header class="fixed top-0 w-full z-50 glass-nav bg-surface/80 shadow-md">
         <nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
-            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer">CURATED AUTO</div>
+            <div class="font-headline-md text-headline-md tracking-tighter text-on-surface cursor-pointer" id="company-name">CURATED AUTO</div>
             <div class="flex items-center gap-6">
-                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Sell Your Car</a>
+                <a class="nav-link font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Browse</a>
                 <button class="shimmer-btn text-white font-label-md text-label-md px-6 py-3 rounded-lg btn-active-scale transition-transform">
                     Book Now
                 </button>
@@ -266,7 +266,7 @@
                             </div>
                             <div>
                                 <label class="block font-label-sm text-label-sm mb-1">Phone Number</label>
-                                <input id="inquiry-phone" class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 px-4 text-body-md transition-shadow" placeholder="+1 (555) 000-0000" type="tel">
+                                <input id="inquiry-phone" class="w-full bg-surface-container-low border border-outline-variant rounded-lg focus:ring-2 focus:ring-primary py-3 px-4 text-body-md transition-shadow" placeholder="+91 98765 43210" type="tel">
                             </div>
                             <button onclick="sendInquiry()" class="w-full bg-primary text-white font-label-md text-label-md py-4 rounded-lg hover:opacity-90 btn-active-scale transition-all shadow-lg hover:shadow-primary/20">
                                 Send Inquiry
@@ -281,7 +281,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="w-full mt-20 bg-tertiary">
+    <footer class="w-full bg-tertiary py-6">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop px-margin-desktop max-w-container-max mx-auto py-10">
             <div class="md:col-span-12 text-center">
                 <p class="font-body-md text-tertiary-fixed-dim text-center">© 2026 Curated Auto Gallery. All rights reserved.</p>
@@ -296,6 +296,9 @@
 
     // Derive product ID from the URL path: /<product-id>  OR  ?id=<product-id>
     function getProductId() {
+    const company_profile = {
+        company_name: 'CURATED AUTO'
+    };
         const params = new URLSearchParams(location.search);
         if (params.get('id')) return params.get('id');
         const slug = location.pathname.split('/').filter(Boolean).pop();
@@ -427,7 +430,7 @@
 
     function renderProduct(data) {
         // Page title
-        document.title = `${data.title} | CURATED AUTO`;
+        document.title = `${data.title} | ${company_profile.company_name}`;
 
         // Gallery
         galleryImages = data.images || [];
@@ -460,6 +463,8 @@
 
     // ── BOOT ───────────────────────────────────────────────────────────────────
     loadProduct();
+    document.getElementById('company-name').textContent = company_profile.company_name;
+    document.getElementById('page-title').textContent = `Loading… | ${company_profile.company_name}`;
 
     window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
